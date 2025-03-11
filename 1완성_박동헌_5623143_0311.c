@@ -3,10 +3,10 @@
 int main() {
     int num;
 
-    printf("������ �Է��ϼ���: ");
+    printf("정수를 입력하세요: ");
     scanf("%d", &num);
 
-    printf("�Էµ� ������ 32��Ʈ ǥ�� : ");
+    printf("입력된 정수의 32비트 표현: ");
     for (int i = 31; i >= 0; i--) {
         int change = num >> i & 1;
         printf("%d", change);
