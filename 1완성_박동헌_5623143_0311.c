@@ -3,10 +3,10 @@
 int main() {
     int num;
 
-    printf("ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”: ");
+    printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
     scanf("%d", &num);
 
-    printf("ìž…ë ¥ëœ ì •ìˆ˜ì˜ 32ë¹„íŠ¸ í‘œí˜„: ");
+    printf("ÀÔ·ÂµÈ Á¤¼öÀÇ 32ºñÆ® Ç¥Çö: ");
     for (int i = 31; i >= 0; i--) {
         int change = num >> i & 1;
         printf("%d", change);
