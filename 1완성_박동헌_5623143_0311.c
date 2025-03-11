@@ -12,5 +12,3 @@ int main() {
         printf("%d", change);
     }
 }
-
-/**/
