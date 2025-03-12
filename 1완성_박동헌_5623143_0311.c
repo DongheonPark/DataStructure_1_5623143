@@ -4,7 +4,7 @@ int main() {
     int num;
 
     printf("정수를 입력하세요: ");
-    scanf("%d", &num); // 제 개발환경이 vscode여서 scnaf를 사용하였습니다.
+    scanf_s("%d", &num);
 
     printf("입력된 정수의 32비트 표현: ");
     for (int i = 31; i >= 0; i--) { // i는 31부터 시작하여 0까지 감소
