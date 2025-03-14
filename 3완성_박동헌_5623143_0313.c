@@ -5,7 +5,7 @@ int main() {
     char word[100];
 
     printf("문자열을 입력하세요: "); //임의로 100 지정
-    scanf("%[^\n]s", word); //한 줄로 문자열 입력 받음
+    scanf_s("%[^\n]s", word); //한 줄로 문자열 입력 받음
 
     // 문자열 길이
     int count = 0;
