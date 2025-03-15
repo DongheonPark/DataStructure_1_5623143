@@ -7,7 +7,7 @@ int main() {
     printf("문자열을 입력하세요: "); //임의로 100 지정
     scanf_s("%[^\n]s", word); //한 줄로 문자열 입력 받음
 
-    // 문자열 길이
+    //문자열 길이
     int count = 0;
     for(int i = 0; word[i] != 0; i++) { //0부터 문자열 끝까지 반복
         count += 1;
