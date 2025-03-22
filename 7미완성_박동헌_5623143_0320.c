@@ -1,27 +1,27 @@
 /* 
-ë¯¸ì™„ì„±, ê²°ê³¼ê°’ì´ ì˜¬ë°”ë¥´ì§€ ì•ŠìŒ
+¹Ì¿Ï¼º, °á°ú°ªÀÌ ¿Ã¹Ù¸£Áö ¾ÊÀ½
 */
 
 #include <stdio.h>
 
-int add(int num1, int num2) { // ë§ì…ˆ í•¨ìˆ˜
+int add(int num1, int num2) { // µ¡¼À ÇÔ¼ö
     return num1 + num2;
 }
     
-int sub(int num1, int num2) { // ëº„ì…ˆ í•¨ìˆ˜
+int sub(int num1, int num2) { // »¬¼À ÇÔ¼ö
     return num1 - num2;
 }
     
-int mul(int num1, int num2) { // ê³±ì…ˆ í•¨ìˆ˜
+int mul(int num1, int num2) { // °ö¼À ÇÔ¼ö
     return num1 * num2;
 }
 
-float div(int num1, int num2) { // ë‚˜ëˆ—ì…ˆ í•¨ìˆ˜
-    if (num2 == 0) { // num2ì— 0ì´ ì˜¤ë©´ ë‚˜ëˆ—ì…ˆì€ ì—°ì‚° ë¶ˆê°€
-        printf("0ì€ ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ìˆ˜ì…ë‹ˆë‹¤.\n");
-        return 0.0f; // 0ì„ ë°˜í™˜í•˜ë‚˜ float í˜•ì‹ì´ì–´ì•¼ í•˜ê¸°ì— "0.0f" ë¡œ ì‘ì„±
+float div(int num1, int num2) { // ³ª´°¼À ÇÔ¼ö
+    if (num2 == 0) { // num2¿¡ 0ÀÌ ¿À¸é ³ª´°¼ÀÀº ¿¬»ê ºÒ°¡
+        printf("0Àº »ç¿ëÇÒ ¼ö ¾ø´Â ¼öÀÔ´Ï´Ù.\n");
+        return 0.0f; // 0À» ¹İÈ¯ÇÏ³ª float Çü½ÄÀÌ¾î¾ß ÇÏ±â¿¡ "0.0f" ·Î ÀÛ¼º
     } else {
-        return (float) num1 / num2; // num2ê°€ 0ì´ ì•„ë‹ˆë©´ ì •ìƒì ìœ¼ë¡œ ë‚˜ëˆ—ì…ˆì´ ê°€ëŠ¥í•˜ë¯€ë¡œ ì—°ì‚°
+        return (float) num1 / num2; // num2°¡ 0ÀÌ ¾Æ´Ï¸é Á¤»óÀûÀ¸·Î ³ª´°¼ÀÀÌ °¡´ÉÇÏ¹Ç·Î ¿¬»ê
     }
 }
 
@@ -56,16 +56,16 @@ int main() {
     int num1, num2, num3, num4, num5;
     char c1, c2, c3, c4;
 
-    /* ê²°ê³¼
-    ê³„ì‚°í•  ìˆ˜ì‹ì„ ì…ë ¥í•˜ì„¸ìš” (ì˜ˆ: 3 + 5 * 2 - 8 / 4): 
-    ê²°ê³¼: 59.000000
+    /* °á°ú
+    °è»êÇÒ ¼ö½ÄÀ» ÀÔ·ÂÇÏ¼¼¿ä (¿¹: 3 + 5 * 2 - 8 / 4): 
+    °á°ú: 59.000000
     */
 
-    printf("ê³„ì‚°í•  ìˆ˜ì‹ì„ ì…ë ¥í•˜ì„¸ìš” (ì˜ˆ: 3 + 5 * 2 - 8 / 4): ");
+    printf("°è»êÇÒ ¼ö½ÄÀ» ÀÔ·ÂÇÏ¼¼¿ä (¿¹: 3 + 5 * 2 - 8 / 4): ");
     scanf("%d %c %d %c %d %c %d %c %d", &num1, &c1, &num2, &c2, &num3, &c3, &num4, &c4, &num5);
    
     float result = running(num1, c1, num2, c2, num3, c3, num4, c4, num5);
 
-    printf("ê²°ê³¼: %.6f\n", result);
+    printf("°á°ú: %.6f\n", result);
     return 0;
 }  
