@@ -31,7 +31,7 @@ int delete(ContactList* list, const char* name) {
 int search(const ContactList* list, const char* name) {
     for (int i = 0; i < list->size; i++) {
         if (strcmp(list->data[i].name, name) == 0) {
-            printf("ì´ë¦„: %s, ì „í™”ë²ˆí˜¸: %s\n", list->data[i].name, list->data[i].phone);
+            printf("ÀÌ¸§: %s, ÀüÈ­¹øÈ£: %s\n", list->data[i].name, list->data[i].phone);
             return 1;
         }
     }
@@ -39,13 +39,13 @@ int search(const ContactList* list, const char* name) {
 }
 
 void print(const ContactList* list) {
-    printf("----- ì „ì²´ ì—°ë½ì²˜ -----\n");
+    printf("----- ÀüÃ¼ ¿¬¶ôÃ³ -----\n");
     if (list->size == 0) {
-        printf("ë“±ë¡ëœ ì—°ë½ì²˜ê°€ ì—†ìŠµë‹ˆë‹¤.\n");
+        printf("µî·ÏµÈ ¿¬¶ôÃ³°¡ ¾ø½À´Ï´Ù.\n");
         return;
     }
     for (int i = 0; i < list->size; i++) {
-        printf("[%d] ì´ë¦„: %s, ì „í™”ë²ˆí˜¸: %s\n", i + 1, list->data[i].name, list->data[i].phone);
+        printf("[%d] ÀÌ¸§: %s, ÀüÈ­¹øÈ£: %s\n", i + 1, list->data[i].name, list->data[i].phone);
     }
     printf("--------------------\n");
 }

@@ -11,45 +11,45 @@ int main() {
     char phone[PHONE_LEN];
 
     while (1) {
-        printf("===== ì „í™”ë²ˆí˜¸ë¶€ ë©”ë‰´ =====\n");
-        printf("1. ì—°ë½ì²˜ ì¶”ê°€\n");
-        printf("2. ì—°ë½ì²˜ ì‚­ì œ\n");
-        printf("3. ì—°ë½ì²˜ ê²€ìƒ‰\n");
-        printf("4. ì „ì²´ ì—°ë½ì²˜ ì¶œë ¥\n");
-        printf("0. ì¢…ë£Œ\n");
-        printf("ë©”ë‰´ë¥¼ ì„ íƒí•˜ì„¸ìš”: ");
+        printf("===== ÀüÈ­¹øÈ£ºÎ ¸Ş´º =====\n");
+        printf("1. ¿¬¶ôÃ³ Ãß°¡\n");
+        printf("2. ¿¬¶ôÃ³ »èÁ¦\n");
+        printf("3. ¿¬¶ôÃ³ °Ë»ö\n");
+        printf("4. ÀüÃ¼ ¿¬¶ôÃ³ Ãâ·Â\n");
+        printf("0. Á¾·á\n");
+        printf("¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä: ");
         scanf_s("%d", &choice);
         getchar();
     
         if (choice == 1) {
-            printf("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”: ");
+            printf("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
             fgets(name, NAME_LEN, stdin);
             name[strcspn(name, "\n")] = '\0';
     
-            printf("ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
+            printf("ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
             fgets(phone, PHONE_LEN, stdin);
             phone[strcspn(phone, "\n")] = '\0';
     
             add(&list, name, phone);
-            printf("ì—°ë½ì²˜ê°€ ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.\n");
+            printf("¿¬¶ôÃ³°¡ Ãß°¡µÇ¾ú½À´Ï´Ù.\n");
         }
 
         else if (choice == 2) {
-            printf("ì‚­ì œí•  ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”: ");
+            printf("»èÁ¦ÇÒ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
             fgets(name, NAME_LEN, stdin);
             name[strcspn(name, "\n")] = '\0';
     
             delete(&list, name);
-            printf("ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.\n");
+            printf("»èÁ¦µÇ¾ú½À´Ï´Ù.\n");
         }
 
         else if (choice == 3) {
-            printf("ê²€ìƒ‰í•  ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”: ");
+            printf("°Ë»öÇÒ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
             fgets(name, NAME_LEN, stdin);
             name[strcspn(name, "\n")] = '\0';
     
             if (!search(&list, name))
-                printf("ì—°ë½ì²˜ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\n");
+                printf("¿¬¶ôÃ³¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.\n");
         }
 
         else if (choice == 4) {
@@ -57,12 +57,12 @@ int main() {
         }
 
         else if (choice == 0) {
-            printf("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.\n");
+            printf("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.\n");
             return 0;
         }
 
         else {
-            printf("ìˆ«ìë¥¼ ì˜ëª» ì…ë ¥í–ˆìŠµë‹ˆë‹¤.\n");
+            printf("¼ıÀÚ¸¦ Àß¸ø ÀÔ·ÂÇß½À´Ï´Ù.\n");
         }
         printf("\n");
     }
